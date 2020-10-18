@@ -1,0 +1,133 @@
+.reviews {
+    padding: 54px 0;
+    min-height: 450px;
+
+  &__head {
+    font-family: "Circe-ExtraBold", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 40px;
+  }
+
+  &__item {
+    width: 100%;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 20px;
+    min-height: 300px;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 22px  19px;
+    color: $reviews-c;
+    border: 1px solid $reviews-border;
+    border-radius: 20px;
+    font-family: "Circe-Light", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__triangle {
+    position: absolute;
+    left: 40px;
+    bottom: -20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: column;
+    padding: 42px 0 0 15px;
+  }
+
+  &__name {
+    font-family: "Circe-ExtraBold", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+
+  &__age {
+    font-family: "Circe-Light", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .reviews {
+    padding: 44px 0 48px;
+
+    &__head {
+      padding: 0;  
+      font-size: 30px;
+      line-height: 37px;    
+      width: 104%;
+      margin-left: -2%;
+    }
+
+    &__list {
+      min-height: 298px;
+      padding: 0;
+      width: 98%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    &__item {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+      left: 50%;
+      transform: translate(-50%, 0);
+      position: absolute;
+      &--active {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+
+    &__text {
+      line-height: 16px;
+    }
+
+    &__wrapper {
+      margin-top: 40px;
+    }
+
+    &__user {
+      padding: 35px 0 0 8px;
+    }
+
+    &__boolets {
+      margin-top: 7px;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.info {
+
+  &__head {
+    font-family: "Circe-ExtraBold", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 26px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 28px 64px;
+    min-height: 365px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(1) {
+      .info__text {
+        width: 277px;
+        padding-right: 40px;
+      }
+    }
+    &:nth-child(2) {
+      .info__text {
+        width: 265px;
+      }
+    }
+    &:nth-child(3) {
+      .info__text {
+        width: 160px;
+        padding-left: 29px;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: 400px;
+    margin-bottom: 36px;
+  }
+
+  &__image {
+    display: flex;
+    
+  }
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 22px;
+    color: $color;
+    width: 263px;
+
+    text-align: center;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .info {
+
+    &__head {
+      width: 80%;
+      font-size: 30px;
+      line-height: 34px;
+      margin: 45px auto 0;
+    }
+
+    &__image-wrapper {
+      min-height: 275px;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      padding-left: 0;
+    }   
+
+    &__list {    
+      min-height: 420px;
+      padding: 0 28px;
+      position: relative;
+    }
+
+    &__item {
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+      left: 50%;
+      transform: translate(-50%, 0);
+      position: absolute;
+      &--active {
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      &:nth-child(1n) {
+        .info__text {
+          width: 150px;
+          padding: 0;
+        }
+      }
+    }
+
+    &__image {
+      width: 238px;
+      margin: 0 auto;
+    }
+
+    &__boolets {
+      margin-top: 1px;
+      margin-bottom: 34px;
+    }
+  }
+}

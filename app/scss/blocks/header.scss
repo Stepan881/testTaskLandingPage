@@ -1,0 +1,89 @@
+.header {
+  background: url(./../img/heager-bg.png) center no-repeat;
+  background-size: cover;
+  background-color: $header-bg;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  padding-top: 60px;
+
+  &__logo-wrapeer{
+    margin-bottom: 77px;
+    width: 186px;
+    height: 49px;
+    height: auto;
+  }
+
+  &__head {
+    font-family: "Circe-ExtraBold", "Arial", sans-serif;
+    color: $header-c;
+    font-size: 54px;
+    line-height: 60px;
+
+  
+    text-transform: uppercase;
+    width: 50%;
+    margin: 0 0 15px 0;
+  }
+
+  &__advantages {
+    color: $header-c;
+    font-size: 24px;
+    line-height: 28px;
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    box-shadow: 41px -20px 30px rgba(353, 47, 91, 0.3);
+
+  }
+
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    
+    padding-top: 22px;
+    background: 
+      url(./../img/heager-m-bg3.png) 64% 344px no-repeat,
+      url(./../img/heager-m-bg1.png) center 164px no-repeat,
+      url(./../img/heager-m-bg2.png) 52% 267px no-repeat,
+      url(./../img/heager-m-bg4.png) 100% 12px no-repeat,
+      url(./../img/heager-m-bg5.png) -78% -438px no-repeat,
+      url(./../img/heager-m-bg6.png) 0% 0 no-repeat,
+      url(./../img/heager-m-bg7.png) 100% 0 no-repeat;
+
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #ea7f8c;
+      z-index: -1;
+    }
+
+    &__logo-wrapeer{
+      padding-left: 5%;
+      margin-bottom: 25px;
+    }
+
+    &__head {
+      font-size: 30px;
+      line-height: 32px;
+      width: 100%;
+      padding: 0 5%;
+      text-align: center;
+    }
+    &__advantages {
+      font-size: 20px;
+      line-height: 22px;
+      text-align: center;
+      margin: 0 auto 258px;
+    }
+  }
+
+}

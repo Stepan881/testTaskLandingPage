@@ -1,0 +1,25 @@
+.boolets {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .boolets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__boolet {
+      display: flex;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #eaeaea;
+      margin: 5px;
+      cursor: pointer;
+
+      &--active {
+        background-color: #ffdd0c;
+      }
+    }  
+  }
+}
